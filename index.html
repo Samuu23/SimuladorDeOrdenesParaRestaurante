@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="JavaScript/Data/menu.js"></script>
+    <script src="JavaScript/Data/Ordenes.js"></script>
+    <script src="JavaScript/Functions.js"></script>
+    <script src="JavaScript/Main.js"></script>
+    <title>Pedidos Para Restaurante</title>
+</head>
+
+<body onload="init()">
+    <div>
+        <h1 class="p-4 text-center">SIMULADOR DE PEDIDOS PARA RESTAURANTE</h1>
+        <h3 class=" p-3 text-center">Menu</h3>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="p-4">
+            <h4>Platos</h4>
+            <p>
+                1.Milanesa Con Papas. $500<br>
+                2.fideos Con Tuco. $550<br>
+                3.Hamburguesa Con Papas. $400<br>
+                4.Empanadas De Carne. $650<br>
+                5.Lomito Con Papas. $550<br>
+                6.Pizza. $400<br>
+            </p>
+        </div>
+        <div class="p-4">
+            <h4>Refrescos</h4>
+            <p>
+                7.CocaCola. $200 <br>
+                8.Fanta. $200 <br>
+                9.Sprite. $200 <br>
+                10.Agua. $150 <br>
+                11.Agua Con Gas. $150 <br>
+            </p>
+        </div>
+        <div class="p-4">
+            <h4>Postres</h4>
+            <p>
+                12.Helado. $300 <br>
+                13.Flan Con Dulce De Leche. $350 <br>
+                14.Torta. $400 <br>
+            </p>
+        </div>
+    </div>
+    <div class="contenedorDeBotones container">
+        <div class="d-flex justify-content-center align-items-center">
+            <button type="button" id="realizarOrdenBtn" class="btn btn-primary btn-lg m-2">Realizar Orden</button>
+            <button type="button" id="pedidoRealizadoBtn" class="pedidoRealizadoBtn btn btn-success btn-lg m-2">Orden Realizada</button>
+            <button type="button" id="finalizarOrdenBtn" class="finalizarOrdenBtn btn btn-danger btn-lg m-2">Finalizar Orden</button>
+        </div>
+        <div id="tablaDeOrdenes"></div>
+    </div>
+
+</body>
+
+</html>
