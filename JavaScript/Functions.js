@@ -22,9 +22,7 @@ function crearOrdenes(){
 
             ordenes.push(orden);
             cargarOrdenes();
-            if(orden.productos.length>0){
-                eliminarOrdenErronea()
-            }
+
             console.log("LISTA DE ORDENES",ordenes);
             console.log("ORDEN REALIZADA:", orden);
           
@@ -64,17 +62,6 @@ function respuestaBtnCambiarEstado(){
     cambiarDeEstado();
 }
 
-//funcion para Eliminar ordenes mal ingresadas
-
-function eliminarOrdenErronea(orden){
-alert("Acaba de ingresar de manera erronea tu menu, procederemos a eliminarlo")
-
-let index=ordenes.findIndex(function(orden){
-    return orden.productos.length>0
-})
-let eliminarOrdenErronea2=index+1
-ordenes.splice(index, eliminarOrdenErronea2)
-}
 
 //funcion para eliminar ordenes
 
