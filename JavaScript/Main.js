@@ -22,14 +22,14 @@ function cargarOrdenes(){
                 </thead>`;
 
         const tbody= document.createElement("tbody");
-        ordenes.forEach((productosDelaOrden)=>{
+        ordenes.map((orden=>{
             const tr= document.createElement("tr");
-            tr.innerHTML=`<td>${productosDelaOrden.id}</td>
-                          <td>${calcularPrecio(productosDelaOrden.productos)}</td>
-                          <td>${calcularOrden(productosDelaOrden.productos)}</td>
-                          <td>${productosDelaOrden.estado}</td>`;
-            tbody.appendChild(tr);
-        });
+        tr.innerHTML=`<td>${orden.id}</td>
+                      <td>${calcularPrecio(orden.productos)}</td>
+                      <td>${calcularOrden(orden.productos)}</td>
+                      <td>${orden.estado}</td>`;
+        tbody.appendChild(tr);
+        }));
     
 
         table.appendChild(tbody);
@@ -40,7 +40,9 @@ function cargarOrdenes(){
                
         const btnRealizarOrdenes = document.getElementById("realizarOrdenBtn");
         btnRealizarOrdenes.addEventListener("click", respuestaBtnRealizarOrdenes); 
-        
+
+        const btnFinalizarOrden = document.getElementById("finalizarOrdenBtn");
+        btnFinalizarOrden.addEventListener("click", respuestaBtnFinOrden);        
         }
 
 
